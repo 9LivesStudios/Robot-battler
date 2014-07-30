@@ -6,9 +6,6 @@ By Legosoldat and Script_Coded
 This is a WIP.
 We're coding in pure java, and any suggestions are highly appriciated.
 
+- [ ] Add grass tile
+
 Thank you for checking out Robot Battler!
-
-
-|To-do list         | Done yet?         |
-|-------------------|-------------------|
-|Add grass tile     | Not finished      |
