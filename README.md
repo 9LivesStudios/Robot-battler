@@ -10,5 +10,5 @@ Thank you for checking out Robot Battler!
 
 
 |this is table one | and this two|
-|--------------------------------|
-|and three...      | Four?|
+|------------------|-------------|
+|and three...      | Four?       |
