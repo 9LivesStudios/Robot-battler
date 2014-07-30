@@ -1,8 +1,6 @@
 Robot-battler
 By Legosoldat and Script_Coded
 
-GIT url:
-https://github.com/Legosoldat/Robot-battler
 =============
 
 This is a WIP.
