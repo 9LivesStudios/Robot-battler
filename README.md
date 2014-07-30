@@ -1,6 +1,7 @@
 Robot-battler
 By Legosoldat and Script_Coded
 
+![alt tag](https://github.com/Legosoldat/Robot-battler/blob/master/Rpg/Rpg/res/logo.png)
 ===============================
 
 This is a WIP.
@@ -10,16 +11,6 @@ Any questions?
 Contact us at *robotbattle@gmail.com*
 
 - [ ] Add grass tile
-<!--
-<form action="MAILTO:robotbattler@gmail.com" method="post" enctype="text/plain">
-Name:<br>
-<input type="text" name="name" value="Name*" required><br>
-E-mail:<br>
-<input type="text" name="mail" value="Email"><br>
-Comment:<br>
-<input type="text" name="suggestion" value="Suggestion, question or anyhing else you may have on your mind." size="50"><br><br>
-<input type="submit" value="Send">
-</form>
--->
+
 
 Thank you for checking out Robot Battler!
