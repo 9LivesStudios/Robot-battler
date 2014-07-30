@@ -153,7 +153,7 @@ public class Game extends Canvas implements Runnable{
 			}
 		}
 		
-		Font.render("Robot-battler!", screen, 0, 0, Colours.get(000, -1, -1, 555));
+		Font.render("Hello World! 0157", screen, 0, 0, Colours.get(000, -1, -1, 555));
 		
 		for (int y = 0; y < screen.height; y++) {
 			for (int x = 0; x < screen.width; x++) {
