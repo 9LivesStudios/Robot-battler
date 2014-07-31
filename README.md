@@ -11,6 +11,6 @@ Any questions?
 Contact us at *robotbattle@gmail.com*
 
 - [ ] Add grass tile
-
+- [x] Add player sprite
 
 Thank you for checking out Robot Battler!
