@@ -1,0 +1,12 @@
+package game.level.tiles;
+
+import game.gfx.Screen;
+
+public class Tile {
+
+	public void render(Screen screen, Level level, int i, int j) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

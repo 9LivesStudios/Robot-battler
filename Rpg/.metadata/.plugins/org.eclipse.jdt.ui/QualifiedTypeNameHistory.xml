@@ -4,6 +4,7 @@
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
-<fullyQualifiedTypeName name="game.gfx.Colours"/>
 <fullyQualifiedTypeName name="game.gfx.Font"/>
+<fullyQualifiedTypeName name="game.gfx.Colours"/>
+<fullyQualifiedTypeName name="game.level.Level"/>
 </qualifiedTypeNameHistroy>
