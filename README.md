@@ -13,5 +13,6 @@ Contact us at *robotbattle@gmail.com*
 - [ ] Add grass tile
 - [x] Add player sprite
 - [ ] Add sound and music
+- [ ] Add enemys and uppgrades
 
 Thank you for checking out Robot Battler!
