@@ -10,8 +10,8 @@ We're coding in pure java and any suggestions are highly appriciated.
 Any questions?
 Contact us at *robotbattle@gmail.com*
 
-- [ ] Add grass tile
 - [x] Add player sprite
+- [ ] Add grass tile
 - [ ] Add sound and music
 - [ ] Add enemys and uppgrades
 
