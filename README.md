@@ -9,6 +9,8 @@ Robot-battler is a wave-based game with lots of customization.
 This is a WIP.
 We're coding in pure java and any suggestions are highly appriciated.
 
+[*To-Do list*](https://github.com/9LivesStudios/Robot-battler/blob/master/TO-DO.md)
+
 Any questions?
 Contact us at *ninelivestudios.com*
 
