@@ -5,4 +5,7 @@ To-Do list:
 - [x] Add player
 - [ ] Add enemys
 - [ ] Add sound and music
-- [ ] Add uppgrades
+- [ ] Add gui
+- [ ] Add level generation
+- [ ] Add upgrades
+- [ ] Add cutscenes
