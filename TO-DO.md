@@ -3,6 +3,7 @@ To-Do list:
 - [x] Add player sprite
 - [x] Add grass tile
 - [x] Add player
+- [ ] Add sprites for all player directions
 - [ ] Add projectiles
 - [ ] Add enemys
 - [ ] Add animations
