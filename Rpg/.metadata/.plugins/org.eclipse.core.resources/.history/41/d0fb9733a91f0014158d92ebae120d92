@@ -28,7 +28,7 @@ public class Level {
 				if (x * y % 10 < 5) {
 					tiles[x + y * width] = Tile.GRASS.getid();
 				} else {
-					tiles[x + y * width] = Tile.GRASS.getid();
+					tiles[x + y * width] = Tile.STONE.getid();
 				}
 			}
 		}
