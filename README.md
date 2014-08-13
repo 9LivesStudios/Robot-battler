@@ -12,6 +12,6 @@ We're coding in pure java and any suggestions are highly appriciated.
 [_**To-Do list**_](TO-DO.md)
 
 Any questions?
-Contact us at *ninelivestudios.com*
+Contact us at *ninelivestudios@gmail.com*
 
 Thank you for checking out Robot Battler!
