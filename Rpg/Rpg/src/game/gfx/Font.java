@@ -2,6 +2,7 @@ package game.gfx;
 
 public class Font {
 
+	@SuppressWarnings("unused")
 	private static String chars = "" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ      "
 			+ "0123456789.,:;'\"!?$%()-=+/      ";
 

@@ -5,6 +5,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class InputHandler implements KeyListener {
 
 	public InputHandler(Game game) {
