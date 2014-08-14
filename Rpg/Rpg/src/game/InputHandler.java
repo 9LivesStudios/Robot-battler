@@ -31,10 +31,15 @@ public class InputHandler implements KeyListener {
 		}
 	}
 
-	public Key up = new Key();
-	public Key down = new Key();
-	public Key left = new Key();
-	public Key right = new Key();
+	public Key MUp = new Key();
+	public Key MDown = new Key();
+	public Key MLeft = new Key();
+	public Key MRight = new Key();
+	
+	public Key SUp = new Key();
+	public Key SDown = new Key();
+	public Key SLeft = new Key();
+	public Key SRight = new Key();
 
 	public void keyPressed(KeyEvent e) {
 		toggleKey(e.getKeyCode(), true);
@@ -50,13 +55,21 @@ public class InputHandler implements KeyListener {
 
 	public void toggleKey(int keyCode, boolean isPressed) {
 		if (keyCode == KeyEvent.VK_W)
-			up.toggle(isPressed);
+			MUp.toggle(isPressed);
 		if (keyCode == KeyEvent.VK_S)
-			down.toggle(isPressed);
+			MDown.toggle(isPressed);
 		if (keyCode == KeyEvent.VK_A)
-			left.toggle(isPressed);
+			MLeft.toggle(isPressed);
 		if (keyCode == KeyEvent.VK_D)
-			right.toggle(isPressed);
+			MRight.toggle(isPressed);
+		if (keyCode == KeyEvent.VK_UP)
+			MUp.toggle(isPressed);
+		if (keyCode == KeyEvent.VK_DOWN)
+			MDown.toggle(isPressed);
+		if (keyCode == KeyEvent.VK_LEFT)
+			MLeft.toggle(isPressed);
+		if (keyCode == KeyEvent.VK_RIGHT)
+			MRight.toggle(isPressed);
 	}
 
 }
