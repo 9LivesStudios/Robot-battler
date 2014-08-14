@@ -1,3 +1,4 @@
+TerminalPrefInvertColors=true
 dtdComment=\#FFFFFF | null | null | null | null | null
 dtdData=\#CFBFAD | null | null | null | null | null
 dtdDefault=\#CFBFAD | null | null | null | null | null
@@ -7,3 +8,4 @@ dtdSymbol=\#CFBFAD | null | null | null | null | null
 dtdTag=\#CFBFAD | null | null | null | null | null
 dtdTagName=\#CFBFAD | null | null | null | null | null
 eclipse.preferences.version=1
+overriddenByCSS=,TerminalPrefInvertColors,

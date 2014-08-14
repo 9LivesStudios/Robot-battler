@@ -1,2 +1,4 @@
+TerminalPrefInvertColors=true
 eclipse.preferences.version=1
-themeid=com.github.eclipsecolortheme.themes.darkjuno
+overriddenByCSS=,TerminalPrefInvertColors,
+themeid=org.eclipse.e4.ui.css.theme.e4_dark
