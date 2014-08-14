@@ -3,7 +3,8 @@ To-Do list:
 - [x] Add player sprite
 - [x] Add grass tile
 - [x] Add player
-- [x] Add sprites for all player directions
+- [x] Add player sprites for up/down
+- [ ] Add player sprites for left/right
 - [ ] Add projectiles
 - [ ] Add enemys
 - [ ] Add animations
@@ -12,4 +13,3 @@ To-Do list:
 - [ ] Add level generation
 - [ ] Add upgrades
 - [ ] Add cutscenes
-
