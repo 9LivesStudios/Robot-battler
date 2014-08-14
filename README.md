@@ -1,7 +1,7 @@
 Robot-battler
 By Legosoldat and Script_Coded
 
-![alt tag](https://github.com/Legosoldat/Robot-battler/blob/master/Rpg/Rpg/res/logo.png)
+![alt tag](https://github.com/Legosoldat/Robot-battler/blob/master/Rpg/Rpg/res/misc/logo.png)
 ===============================
 
 Robot-battler is a wave-based game with lots of flexebility and customization.
