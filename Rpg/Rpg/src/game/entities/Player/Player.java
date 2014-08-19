@@ -1,6 +1,7 @@
-package game.entities;
+package game.entities.Player;
 
 import game.InputHandler;
+import game.entities.Mob;
 import game.gfx.Colours;
 import game.gfx.Screen;
 import game.level.Level;
@@ -9,6 +10,9 @@ public class Player extends Mob {
 
 	private InputHandler input;
 	private int colour = Colours.get(-1, 333, 444, 000);
+	
+	public static int xa = 0;
+	public static int ya = 0;
 
 	public Player(Level level, int x, int y, InputHandler input) {
 		super(level, "Player", x, y, 1);
@@ -16,8 +20,6 @@ public class Player extends Mob {
 	}
 
 	public void tick() {
-		int xa = 0;
-		int ya = 0;
 		if (input.MUp.isPressed())
 			ya--;
 		if (input.MDown.isPressed())

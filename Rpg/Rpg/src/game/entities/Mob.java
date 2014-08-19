@@ -1,6 +1,7 @@
 package game.entities;
 
 import game.level.Level;
+import game.level.tiles.Tile;
 
 public abstract class Mob extends Entity {
 
@@ -41,7 +42,7 @@ public abstract class Mob extends Entity {
 		}
 	}
 	
-	public abstract boolean hasColslided(int xa, int ya);
+	public abstract boolean hasCollided(int xa, int ya);
 	
 		protected boolean isSolidTile(int xa, int ya, int x, int y){
 			if (level == null){ return false; }

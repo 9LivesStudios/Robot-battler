@@ -1,13 +1,31 @@
-package game.entities;
+package game.entities.Player;
 
-public class Bullet extends Entity{
+import game.InputHandler;
+import game.entities.Bullet;
+import game.entities.Entity;
+import game.entities.Mob;
+import game.gfx.Colours;
+import game.gfx.Screen;
+import game.level.Level;
 
-    boolean shot = false;
+public class Shoot extends Entity{
+
+	private InputHandler input;
+
+	public Shoot(Level level, int x, int y, InputHandler input) {
+		super(level);
+		this.input = input;
+	}
+
+	boolean shot = false;
+	boolean hit = false;
     int direction;
+    
+	public Entity bullet;
 
     public void tick() {
-        int xa = player.xa;
-		int ya = player.ya;
+        int xa = Player.xa;
+		int ya = Player.ya;
 		if (input.SUp.isPressed()){
 			if(!hit){
 			    direction=0;
@@ -34,12 +52,18 @@ public class Bullet extends Entity{
 
 		if ( input.SUp.isPressed() || input.SDown.isPressed() || input.SLeft.isPressed() || input.SRight.isPressed() ) {
 			if(shot){
-			    level.addEntity(Bullet);
+			    level.addEntity(bullet);
 			    shot=true;
 			}
 		} else {
 			shot = false;
 		}
     }
+
+	@Override
+	public void render(Screen robot1Res) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
