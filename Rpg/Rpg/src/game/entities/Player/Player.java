@@ -1,4 +1,4 @@
-package game.entities.Player;
+package game.entities.player;
 
 import game.InputHandler;
 import game.entities.Mob;
@@ -36,7 +36,7 @@ public class Player extends Mob {
 		}
 	}
 
-	public void render(Screen robot1Res) {
+	public void render(Screen robot1) {
 		int xTile = 0;
 		int yTile = 28;
 		
@@ -44,11 +44,11 @@ public class Player extends Mob {
 		int xOffset = x - modifier / 2;
 		int yOffset = y - modifier / 2 - 4;
 		
-		robot1Res.render(xOffset, yOffset, xTile + yTile * 32, colour);
-		robot1Res.render(xOffset + modifier, yOffset, (xTile + 1) + yTile * 32, colour);
+		robot1.render(xOffset, yOffset, xTile + yTile * 32, colour);
+		robot1.render(xOffset + modifier, yOffset, (xTile + 1) + yTile * 32, colour);
 		
-		robot1Res.render(xOffset, yOffset + modifier, xTile + (yTile + 1) * 32, colour);
-		robot1Res.render(xOffset + modifier, yOffset + modifier, (xTile + 1) + (yTile + 1) * 32, colour);
+		robot1.render(xOffset, yOffset + modifier, xTile + (yTile + 1) * 32, colour);
+		robot1.render(xOffset + modifier, yOffset + modifier, (xTile + 1) + (yTile + 1) * 32, colour);
 	}
 
 	public boolean hasCollided(int xa, int ya) {

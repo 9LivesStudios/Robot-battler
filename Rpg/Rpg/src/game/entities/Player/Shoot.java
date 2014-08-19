@@ -1,4 +1,4 @@
-package game.entities.Player;
+package game.entities.player;
 
 import game.InputHandler;
 import game.entities.Bullet;

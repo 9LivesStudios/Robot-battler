@@ -53,6 +53,8 @@ public abstract class Mob extends Entity {
 			}
 		return false;
 		
+		}
+		
 		public String getName() {
 			return name;
 		}

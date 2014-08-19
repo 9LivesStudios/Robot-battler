@@ -69,7 +69,7 @@ public class Level {
 		}
 	}
 	
-	private Tile getTile(int x, int y) {
+	public Tile getTile(int x, int y) {
 		if (0 > x || x >= width || 0 > y || y >= height)
 			return Tile.VOID;
 		return Tile.tiles[tiles[x + y * width]];
