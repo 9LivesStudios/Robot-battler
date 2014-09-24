@@ -1,6 +1,6 @@
 package game;
 
-import game.entities.player.Player;
+import game.entities.Player;
 import game.gfx.Colours;
 import game.gfx.Font;
 import game.gfx.Screen;

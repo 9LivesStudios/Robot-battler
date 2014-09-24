@@ -29,7 +29,7 @@ public class InputHandler implements KeyListener {
 			if (isPressed)
 				numTimesPressed++;
 		}
-	} 
+	}
 
 	public Key MUp = new Key();
 	public Key MDown = new Key();
@@ -62,15 +62,14 @@ public class InputHandler implements KeyListener {
 			MLeft.toggle(isPressed);
 		if (keyCode == KeyEvent.VK_D)
 			MRight.toggle(isPressed);
-			
 		if (keyCode == KeyEvent.VK_UP)
-			SUp.toggle(isPressed);
+			MUp.toggle(isPressed);
 		if (keyCode == KeyEvent.VK_DOWN)
-			SDown.toggle(isPressed);
+			MDown.toggle(isPressed);
 		if (keyCode == KeyEvent.VK_LEFT)
-			SLeft.toggle(isPressed);
+			MLeft.toggle(isPressed);
 		if (keyCode == KeyEvent.VK_RIGHT)
-			SRight.toggle(isPressed);
+			MRight.toggle(isPressed);
 	}
 
 }
