@@ -1,12 +1,12 @@
 package game.level;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import game.entities.Entity;
 import game.gfx.Screen;
 import game.gfx.SpriteSheet;
 import game.level.tiles.Tile;
-import game.entities.Entity;
+
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Level {
 
@@ -14,7 +14,7 @@ public class Level {
 	private byte[] tiles;
 	public int width;
 	public int height;
-	public List<Entity> entities = new ArrayList<Entity>();
+	public List<Entity> entities = new CopyOnWriteArrayList<Entity>();
 	
 	public Level(SpriteSheet sheet, int width, int height) {
 		this.sheet = sheet;

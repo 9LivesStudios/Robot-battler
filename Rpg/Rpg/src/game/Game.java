@@ -1,6 +1,6 @@
 package game;
 
-import game.entities.Player;
+import game.entities.player.Player;
 import game.gfx.Colours;
 import game.gfx.Font;
 import game.gfx.Screen;
@@ -40,6 +40,7 @@ public class Game extends Canvas implements Runnable {
 	private Screen screen;
 	private SpriteSheet terrainRes;
 	private SpriteSheet robot1Res;
+	private SpriteSheet entityRes;
 	public InputHandler input;
 	public Level level;
 	public Player player;
@@ -79,9 +80,10 @@ public class Game extends Canvas implements Runnable {
 		screen = new Screen(WIDTH, HEIGHT);
 		terrainRes = new SpriteSheet("/terrain.png");
 		robot1Res = new SpriteSheet("/robots/robot1.png");
+		entityRes = new SpriteSheet("/entity.png");
 		input = new InputHandler(this);
 		level = new Level(terrainRes, 64, 64);
-		player = new Player(level, robot1Res, 0, 0, input);
+		player = new Player(level, robot1Res, entityRes, 0, 0, input);
 		level.addEntity(player);
 	}
 
@@ -95,47 +97,47 @@ public class Game extends Canvas implements Runnable {
 	}
 
 	public void run() {
-		long lastTime = System.nanoTime();
-		double nsPerTick = 1_000_000_000D / 60D;
+		try {
+			long lastTime = System.nanoTime();
+			double nsPerTick = 1_000_000_000D / 60D;
 
-		int ticks = 0;
-		int frames = 0;
+			int ticks = 0;
+			int frames = 0;
 
-		long lastTimer = System.currentTimeMillis();
-		double delta = 0;
+			long lastTimer = System.currentTimeMillis();
+			double delta = 0;
 
-		init();
+			init();
 
-		while (running) {
-			long now = System.nanoTime();
-			delta += (now - lastTime) / nsPerTick;
-			lastTime = now;
-			boolean shouldRender = true;
+			while (running) {
+				long now = System.nanoTime();
+				delta += (now - lastTime) / nsPerTick;
+				lastTime = now;
+				boolean shouldRender = true;
 
-			while (delta >= 1) {
-				ticks++;
-				tick();
-				delta -= 1;
-				shouldRender = true;
-			}
+				while (delta >= 1) {
+					ticks++;
+					tick();
+					delta -= 1;
+					shouldRender = true;
+				}
 
-			try {
 				Thread.sleep(2);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
 
-			if (shouldRender) {
-				frames++;
-				render();
-			}
+				if (shouldRender) {
+					frames++;
+					render();
+				}
 
-			if (System.currentTimeMillis() - lastTimer > 1000) {
-				lastTimer += 1000;
-				System.out.println(ticks + " ticks, " + frames + " frames");
-				frames = 0;
-				ticks = 0;
+				if (System.currentTimeMillis() - lastTimer > 1000) {
+					lastTimer += 1000;
+					System.out.println(ticks + " ticks, " + frames + " frames");
+					frames = 0;
+					ticks = 0;
+				}
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
