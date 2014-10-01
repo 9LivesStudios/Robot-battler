@@ -4,17 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import game.gfx.Screen;
+import game.gfx.SpriteSheet;
 import game.level.tiles.Tile;
 import game.entities.Entity;
 
 public class Level {
 
+	private SpriteSheet sheet;
 	private byte[] tiles;
 	public int width;
 	public int height;
 	public List<Entity> entities = new ArrayList<Entity>();
 	
-	public Level(int width, int height) {
+	public Level(SpriteSheet sheet, int width, int height) {
+		this.sheet = sheet;
 		tiles = new byte[width * height];
 		this.width = width;
 		this.height = height;
@@ -44,6 +47,7 @@ public class Level {
 
 	public void renderTiles(Screen screen, int xOffset, int yOffset) {
 
+		
 		if (xOffset < 0)
 			xOffset = 0;
 		if (xOffset > ((width << 3) - screen.width))
@@ -52,13 +56,14 @@ public class Level {
 			yOffset = 0;
 		if (yOffset > ((height << 3) - screen.height))
 			yOffset = ((height << 3) - screen.height);
-
+		
 		screen.setOffset(xOffset, yOffset);
+		
 
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
 
-				getTile(x, y).render(screen, this, x << 3, y << 3);
+				getTile(x, y).render(screen, sheet, this, x << 3, y << 3);
 
 			}
 		}

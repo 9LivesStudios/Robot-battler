@@ -16,12 +16,9 @@ public class Screen {
 	public int width;
 	public int height;
 
-	public SpriteSheet sheet;
-
-	public Screen(int width, int height, SpriteSheet sheet) {
+	public Screen(int width, int height) {
 		this.width = width;
 		this.height = height;
-		this.sheet = sheet;
 
 		pixels = new int[width * height];
 	}
@@ -31,11 +28,11 @@ public class Screen {
 		this.yOffset = yOffset;
 	}
 
-	public void render(int xPos, int yPos, int tile, int colour) {
-		render(xPos, yPos, tile, colour, 0x00);
+	public void render(SpriteSheet sheet, int xPos, int yPos, int tile, int colour) {
+		render(sheet, xPos, yPos, tile, colour, 0x00);
 	}
 
-	public void render(int xPos, int yPos, int tile, int colour, int mirrorDir) {
+	public void render(SpriteSheet sheet, int xPos, int yPos, int tile, int colour, int mirrorDir) {
 		xPos -= xOffset;
 		yPos -= yOffset;
 

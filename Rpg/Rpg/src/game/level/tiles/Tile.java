@@ -2,6 +2,7 @@ package game.level.tiles;
 
 import game.gfx.Colours;
 import game.gfx.Screen;
+import game.gfx.SpriteSheet;
 import game.level.Level;
 
 public abstract class Tile {
@@ -41,6 +42,6 @@ public abstract class Tile {
 		return emitter;
 	}
 
-	public abstract void render(Screen screen, Level level, int x, int y);
+	public abstract void render(Screen screen, SpriteSheet sheet, Level level, int x, int y);
 
 }

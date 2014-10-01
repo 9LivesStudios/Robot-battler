@@ -37,11 +37,13 @@ public class Game extends Canvas implements Runnable {
 			.getData();
 	private int[] colours = new int[6 * 6 * 6];
 
-	private Screen terrainRes;
-	private Screen robot1Res;
+	private Screen screen;
+	private SpriteSheet terrainRes;
+	private SpriteSheet robot1Res;
 	public InputHandler input;
 	public Level level;
 	public Player player;
+
 	public Game() {
 		setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 		setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
@@ -74,11 +76,12 @@ public class Game extends Canvas implements Runnable {
 			}
 		}
 
-		terrainRes = new Screen(WIDTH, HEIGHT, new SpriteSheet("/terrain.png"));
-		robot1Res = new Screen(WIDTH, HEIGHT, new SpriteSheet("/robots/robot1.png"));
+		screen = new Screen(WIDTH, HEIGHT);
+		terrainRes = new SpriteSheet("/terrain.png");
+		robot1Res = new SpriteSheet("/robots/robot1.png");
 		input = new InputHandler(this);
-		level = new Level(64, 64);
-		player = new Player(level, 0, 0, input);
+		level = new Level(terrainRes, 64, 64);
+		player = new Player(level, robot1Res, 0, 0, input);
 		level.addEntity(player);
 	}
 
@@ -149,24 +152,26 @@ public class Game extends Canvas implements Runnable {
 			return;
 		}
 
-		int xOffset = player.x - robot1Res.width / 2;
-		int yOffset = player.y - robot1Res.height / 2;
+		//int xOffset = player.x - robot1Res.width / 2;
+		//int yOffset = player.y - robot1Res.height / 2;
+		int xOffset = player.x - screen.width / 2;
+		int yOffset = player.y - screen.height / 2;
 
-		level.renderTiles(robot1Res, xOffset, yOffset);
+		level.renderTiles(screen, xOffset, yOffset);
 
 		for (int x = 0; x < level.width; x++) {
 			int colour = Colours.get(-1, -1, -1, 000);
 			if (x % 10 == 0 && x != 0) {
 				colour = Colours.get(-1, -1, -1, 500);
 			}
-			Font.render((x % 10) + "", robot1Res, 0 + (x * 8), 0, colour);
+			Font.render((x % 10) + "", screen, 0 + (x * 8), 0, colour);
 		}
 		
-		level.renderEntities(robot1Res);
+		level.renderEntities(screen);
 		
-		for (int y = 0; y < robot1Res.height; y++) {
-			for (int x = 0; x < robot1Res.width; x++) {
-				int colourCode = robot1Res.pixels[x + y * robot1Res.width];
+		for (int y = 0; y < screen.height; y++) {
+			for (int x = 0; x < screen.width; x++) {
+				int colourCode = screen.pixels[x + y * screen.width];
 				if (colourCode < 255)
 					pixels[x + y * WIDTH] = colours[colourCode];
 			}

@@ -18,5 +18,5 @@ public abstract class Entity {
 
 	public abstract void tick();
 
-	public abstract void render(Screen robot1Res);
+	public abstract void render(Screen screen);
 }
