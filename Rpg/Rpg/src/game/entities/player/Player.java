@@ -16,25 +16,35 @@ public class Player extends Mob {
 	private SpriteSheet bulletSheet;
 	private int colour = Colours.get(-1, 333, 444, 000);
 	private int cooldown = 0;
+	private Direction direction;
 
-	public Player(Level level, SpriteSheet playerSheet, SpriteSheet bulletSheet, int x, int y, InputHandler input) {
+	public Player(Level level, SpriteSheet playerSheet, SpriteSheet bulletSheet, int x, int y, InputHandler input, Direction direction) {
 		super(level, "Player", x, y, 1);
 		this.input = input;
 		this.playerSheet = playerSheet;
 		this.bulletSheet = bulletSheet;
+		this.direction = direction;
 	}
 
 	public void tick() {
 		int xa = 0;
 		int ya = 0;
-		if (input.MUp.isPressed())
+		if (input.MUp.isPressed()) {
 			ya--;
-		if (input.MDown.isPressed())
+			direction = Direction.UP;
+		}
+		if (input.MDown.isPressed()) {
 			ya++;
-		if (input.MLeft.isPressed())
+			direction = Direction.DOWN;
+		}
+		if (input.MLeft.isPressed()) {
 			xa--;
-		if (input.MRight.isPressed())
+			direction = Direction.LEFT;
+		}
+		if (input.MRight.isPressed()) {
 			xa++;
+			direction = Direction.RIGHT;
+		}
 		if (xa != 0 || ya != 0) {
 			move(xa, ya);
 			isMoving = true;
@@ -72,6 +82,18 @@ public class Player extends Mob {
 		int modifier = 8 * scale;
 		int xOffset = x - modifier / 2;
 		int yOffset = y - modifier / 2 - 4;
+		
+		switch (direction) {
+		case DOWN:
+			break;
+		case LEFT:
+			break;
+		case RIGHT:
+			break;
+		case UP:
+			xTile = xTile + 2;
+			break;
+		}
 		
 		screen.render(playerSheet, xOffset, yOffset, xTile + yTile * 32, colour);
 		screen.render(playerSheet, xOffset + modifier, yOffset, (xTile + 1) + yTile * 32, colour);

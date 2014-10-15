@@ -1,5 +1,6 @@
 package game;
 
+import game.entities.Direction;
 import game.entities.player.Player;
 import game.gfx.Colours;
 import game.gfx.Font;
@@ -83,7 +84,7 @@ public class Game extends Canvas implements Runnable {
 		entityRes = new SpriteSheet("/entity.png");
 		input = new InputHandler(this);
 		level = new Level(terrainRes, 64, 64);
-		player = new Player(level, robot1Res, entityRes, 0, 0, input);
+		player = new Player(level, robot1Res, entityRes, 0, 0, input, Direction.DOWN);
 		level.addEntity(player);
 	}
 
