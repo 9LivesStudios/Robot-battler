@@ -5,7 +5,7 @@ To-Do list:
 - [x] Add player
 - [x] Add player sprites for up/down
 - [ ] Add player sprites for left/right
-- [ ] Add projectiles
+- [x] Add projectiles
 - [ ] Add enemys
 - [ ] Add animations
 - [ ] Add sound and music
