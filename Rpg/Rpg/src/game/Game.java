@@ -22,7 +22,7 @@ public class Game extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = 1L;
 
-	public static final int WIDTH = 160;
+	public static final int WIDTH = 200;
 	public static final int HEIGHT = WIDTH / 12 * 9;
 	public static final int SCALE = 3;
 	public static final String NAME = "Robot-battler";
@@ -157,8 +157,8 @@ public class Game extends Canvas implements Runnable {
 
 		//int xOffset = player.x - robot1Res.width / 2;
 		//int yOffset = player.y - robot1Res.height / 2;
-		int xOffset = player.x - screen.width / 2;
-		int yOffset = player.y - screen.height / 2;
+		int xOffset = player.x - screen.width / 50 * 24;
+		int yOffset = player.y - screen.height / 50 * 35;
 
 		level.renderTiles(screen, xOffset, yOffset);
 
