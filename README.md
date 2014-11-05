@@ -14,4 +14,6 @@ We're coding in pure java and any suggestions are highly appriciated.
 Any questions?
 Contact us at *ninelivestudios@gmail.com*
 
+You can also check out our webpage: *http://9livesstudios.github.io*
+
 Thank you for checking out Robot Battler!
